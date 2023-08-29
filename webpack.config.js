@@ -5,7 +5,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: ['@babel/polyfill', './js/index.js'],
+    entry: ['@babel/polyfill', './index.js'],
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
@@ -15,23 +15,23 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './index.html'
-        }),
+            title: 'Git repository collection'
+          }),
         new CleanWebpackPlugin(),
     ],
     module: {
         rules: [
-            { 
-            test: /\.js$/, 
-            exclude: /node_modules/, 
-            loader: {
-                loader: 'babel-loader',
-                options: {
-                    presets: [
-                        '@babel/preset-env'
-                    ]
+            {
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'src'),
+                exclude: /node_modules/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env']
+                  }
                 }
-            }}
+            }
         ]
     }
 }
