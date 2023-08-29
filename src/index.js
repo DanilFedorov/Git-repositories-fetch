@@ -1,7 +1,6 @@
-document.addEventListener('click', function(event) {
-
-    if (event.target.dataset.counter != undefined) { 
-      event.target.value++;
-    }
-
-  });
+//HTML layout 
+import './HTML-blocks/application.js'
+import './HTML-blocks/base-style.js'
+import './HTML-blocks/search.js'
+import './HTML-blocks/repository-collection.js'
+import './HTML-blocks/autocomplete-list.js'
