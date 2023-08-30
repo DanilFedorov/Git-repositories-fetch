@@ -1,8 +1,6 @@
 import { debounce } from './debounce.js'; 
 import { createListItem } from './createListItem.js'; 
 
-export const repositoryCollection = new Set();
-
 function fetchData(searchTerm) {
   fetch(`https://api.github.com/search/repositories?q=${searchTerm}&per_page=5`)
     .then(response => response.json())

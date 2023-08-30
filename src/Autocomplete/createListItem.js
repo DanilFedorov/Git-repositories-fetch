@@ -12,11 +12,11 @@ export function createListItem(data, container) {
     listItem.style.cursor = 'pointer';
 
     listItem.addEventListener('mouseenter', () => {
-        listItem.style.backgroundColor = '#65CDF9'; // Change background color on hover
+        listItem.style.backgroundColor = '#65CDF9'; 
     });
 
     listItem.addEventListener('mouseleave', () => {
-    listItem.style.backgroundColor = '#fff'; // Reset background color when not hovering
+        listItem.style.backgroundColor = '#fff'; 
     });
 
     listItem.addEventListener('click', () => {
