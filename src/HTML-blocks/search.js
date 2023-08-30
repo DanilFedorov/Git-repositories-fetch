@@ -1,6 +1,7 @@
 // Wrapper for search input
 const search = document.createElement('div');
 search.id = 'search';
+search.style.height = '340px';
 application.appendChild(search)
 
 // Search input
